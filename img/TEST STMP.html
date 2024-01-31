@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://smtpjs.com/v3/smtp.js" type = "text/javascript">
+    </script>
+    <script>Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "cayacsproject@gmail.com",
+        Password : "9DC0A1CE82A49176C055A2EC3114ACA78714",
+        To : 'cayacsproject@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "Contact Form",
+        Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone #: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("Message Sent Successfully")
+    );
+    </script>
+    
+    
+    <div class="contact_container"> 
+        <form class="contact_form">
+            <div class="contact_left"> 
+                <h3>Contact Us</h3>
+        
+                <form onsubmit="sendEmail(); reset(); return false;">
+                
+                    <input type="text" name="name" placeholder="Your Name" class = "contact_inputs" required>
+                    <input type="email" name="email" placeholder="Your Email" class = "contact_inputs"required>
+                    <textarea name="message" rows = "4" placeholder="What can we do for you?" class = "contact_inputs"required></textarea>
+                    <button type="submit">Send</button>
+                    
+                
+                </form>
+            </div>
+    
+        </form>
+        <!-- <form >
+            <img src="" alt="">
+        </form> -->
+    
+    </div>
+</body>
+</html>
+
+<style>
+    
+</style>

@@ -1,0 +1,146 @@
+
+h1 {
+        
+    text-align: left;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 50px;
+    height: auto;
+}
+#quote {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    font-size: xxx-large; 
+    width: auto;
+    height: auto;
+    text-decoration-line:underline;
+    color: rgb(13,19,71, 0.9);
+
+    
+}
+.nav_bar {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    height: 90px ;
+    color: rgb(13,19,71);
+    background-color:  rgb(48,71,13, 0.8);
+    border-style: solid;
+    border-color: rgb(13,48,71);
+    border-bottom: 10;
+
+}
+
+#map {
+    border: 20 solid rgb(13,48,71);
+    height: 800px;
+    width: 800px;
+    margin: 50px 25px 75px 50px;
+    align-items: center;
+}
+#map_cap {
+    text-align: left;
+    margin-left:100px;
+    
+}
+.contact_container {    
+    margin: 100px 100px 100px 100px;
+    width: 65%;
+    border: 10px solid;
+    border-color: rgb(13,48,71);
+    background: linear-gradient(rgba(110,126,85, 0.4), rgba(48,71,13, 0.4)), url("img/silver_ratio.jpg");
+
+}
+#Contact_Us {
+    background-color:rgba(110,126,85, 0.4);
+    text-align: center;
+    text-decoration: underline;
+    
+
+}
+
+img {
+    
+    border: 10px solid;
+    border-color: rgb(13,48,71);
+
+}
+body {
+    font-family: Tahoma;
+    font-size: 20px;
+    text-align:center;
+    margin: 0;
+    color: rgb(13,19,71);
+    /* background: rgb(110,126,85) url(img/silver_ratio.jpg); */
+    background: linear-gradient(rgba(110,126,85, 0.8), rgba(133,113,106, 0.9)), url("img/silver_ratio.jpg");
+
+    
+}
+
+footer {
+    color: rgb(13,19,71);
+    display: flex;
+    justify-content: space-between;
+    
+    text-align: bottom;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(48,71,13, 0.8);
+    border-style: solid;
+    border-color: rgb(13,48,71);
+    border-bottom: 10;
+    margin: auto;
+} 
+
+article dl {
+    margin: 1em 2em;
+    font-size: 10 px;
+}
+
+article dt {
+    font-weight: bolder;
+}
+
+article dd {
+    margin-left: 2em;
+}
+
+
+/* #0d1347	(13,19,71)
+#6269a6	(98,105,166)
+#0d3047	(13,48,71)
+#30470d	(48,71,13)
+#6e7e55	(110,126,85) */
+/* 
+background-color: rgb(0,10,12);
+color: rgb(27,46,52);
+border-color: rgb(74,88,89);
+#7c8989	(124,137,137)
+#aaaaaa	(170,170,170) */
+
+/* 
+Color	Hex	RGB
+#586a97	(88,106,151)
+#373416	(55,52,22) brownish
+#ae9781	(174,151,129) tannish
+#85716a	(133,113,106) clay pink
+#2a2725	(42,39,37)
+ */
+
+ /* Color	Hex	RGB
+#0c290e	(12,41,14)
+#3c3c38	(60,60,56)
+#414e3c	(65,78,60)
+#5a6551	(90,101,81)
+#3c6544	(60,101,68) */
+
+/* #310f1c	(49,15,28)
+#433c29	(67,60,41)
+#4e4e4d	(78,78,77)
+#655b5a	(101,91,90)
+#7b7883	(123,120,131) */
