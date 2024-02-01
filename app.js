@@ -1,4 +1,4 @@
-        //index page change image on a mouseover event
+        //index page change image on mouseover event
         $(function ()
         
         { 
@@ -30,7 +30,7 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            //creats formData which is used in the next part    
+            //creates the formatting for the JSON file        
             const formData = {
                 name: name,
                 email: email,
@@ -40,17 +40,17 @@
             
             saveFormDataToJson(formData);
             const formDataString = 'Name: ${name}\nEmail: ${email}\nMessage: ${message}';
-            //smtp info  smtp is an external web service that handles emails
+            //smtp info 
             Email.send({
 
                 SecureToken: "e839cdab-e29a-45ff-aec4-01b48e35c9a3",
-                To: 'cayacsproject@gmail.com',
-                From: "cesaraaj11@gmail.com",
+                To: "cayacsproject@gmail.com",
+                From: "cayacsproject@gmail.com",
                 Subject: "CS112 New Form",
                 Body: `${formDataString}`
             })
 
-            //then will give info regarding if the program worked
+            //.then will give info regarding if the program worked
             .then(
                 () => {
                     alert("Submitted successfully :)");
@@ -63,20 +63,5 @@
             );
             event.preventDefault();
         }
-        //creates object to save as JSON then creates it to be accessible in the website to the user
-
-function saveFormDataToJson(formData) {
-            
-            const jsonData = JSON.stringify(formData);
-        
-        
-            const blob = new Blob([jsonData], { type: 'application/json' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'form_data.json';
-            a.click();
-        }
-
-
 
 //Javascript was finnicky! apis and libraries r cool but they r a bit of a pain to work w as a beginner
