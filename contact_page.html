@@ -6,11 +6,25 @@
     <title>My First Web Page</title>
         <link rel="stylesheet" href="main.css">
         <script type = "text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+        
         <script src="https://smtpjs.com/v3/smtp.js"></script>    
             <!-- This smptjs is here because it is a library used in the contact form -->
+            <script>
+                Email.initialize({
+                    smtp: {
+                        host: 'smtp.elasticemail.com',
+                        username: 'cayacsproject@gmail.com',
+                        password: '0D03BA32EE58CFC9BEFEE2FE95422CD19FAB',
+                        port: 2525,
+                        ssl: true
+                    }
+                });
+            </script>
 </head>
 
-    
+    <!-- SecureToken: "e839cdab-e29a-45ff-aec4-01b48e35c9a3",
+                To: "cayacsproject@gmail.com",
+                From: "cayacsproject@gmail.com" -->
 
 <body > 
     <div class = "nav_bar"> 
