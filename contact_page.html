@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Web Page</title>
         <link rel="stylesheet" href="main.css">
-
         <script type = "text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
-
-        <!-- <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css">
-        <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script> -->
-        <script type = "text/javascript" src=" https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" > </script>
-        <script type="text/javascript">
-        (function() {
-            
-            emailjs.init('service_5flpr89');
-        })();
-    </script>
-    
+        <script src="https://smtpjs.com/v3/smtp.js"></script>    
+            <!-- This smptjs is here because it is a library used in the contact form -->
 </head>
 
     
@@ -32,11 +22,11 @@
     </div>
     <h2>            
         <div> <a href="https://jcshoes05.wixsite.com/website" target="_blank">CONTACT US</a> </div>
-    
+    </h2>
 
-     Hello. Feel free to contact us regarding our services.  </h2>
+    <h2> Hello. Feel free to contact us regarding our services.  </h2>
         <img src="img/cobbler_1_edited.jpg" alt="img/cobbler_1_edited.jpg">
-        <p>Portrayed is one of our best cobblers as he stitches the final details of a durable pair of boots.</p>
+        <p>Portrayed is one of our best cobbler as he stitches the final details of a durable pair of boots.</p>
 
     <footer> 
         <!-- LEFT -->
@@ -61,60 +51,31 @@
         </footer>
     
         <div>
+            <!-- google maps html embed used but OSM w/ leafy is easy, only issue was creating a marker, also gmaps has a lot more usablilty and makes sense because it links to the business -->
             <div id="map">
                 <iframe id = "map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.477975100153!2d-118.25924512505975!3d34.005940020175174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c8611dd21b01%3A0xf35ab636e3b148ba!2sJC%20Footwear!5e0!3m2!1sen!2sus!4v1706577558160!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-                <!-- width="600" height="450" style="border: 5px;"  -->
             </div>
             <p id="map_cap">Shown to the above is the map of the location with embedded within the website. </p>
         </div>
         
-        
-        <!-- <div id="map"></div> -->
+
 
     <div class="contact_container"> 
-        <form class="contact_form">
-            <div class="contact_left"> 
-                <h3 id = "Contact_Us">Contact Us</h3>
-        
-                <form action="https://api.web3forms.com/submit" method="POST">
-
-                    <input type="hidden" name="access_key" value="9e41952d-bedc-4922-a23e-1679f462adde">
-                
+        <h3 id = "Contact_Us">Contact Us</h3>
+            <form id="contactForm" class="contact_form" onsubmit="submitForm(event)">    
+                         <!-- user info -->
                     <input type="text" name="name" placeholder="Your Name" class = "contact_inputs" required>
                     <input type="email" name="email" placeholder="Your Email" class = "contact_inputs"required>
                     <textarea name="message" placeholder="What can we do for you?" class = "contact_inputs"required></textarea>
-                    <button type="submit">Send</button>
+                    <!-- links to JavaScript with the submit Form -->
+                    <button type="button" onclick="submitForm(event)">Send</button>
+
                 
                 </form>
-            </div>
-
         </form>
-        <!-- <form >
-            <img src="" alt="">
-        </form> -->
-
     </div>
 
-
         <script type = "text/javascript" src = "app.js"> </script>
-        <!-- <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    // generate a five digit number for the contact_number variable
-                    this.contact_number.value = Math.random() * 100000 | 0;
-                    // these IDs from the previous steps
-                    emailjs.sendForm('contact_service', 'contact_form', this)
-                        .then(function() {
-                            console.log('SUCCESS!');
-                        }, function(error) {
-                            console.log('FAILED...', error);
-                        });
-                });
-            }
-        </script> -->
-
-      
 </body>
 </html>
 
