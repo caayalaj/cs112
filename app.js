@@ -24,7 +24,7 @@
 
 
         //EMAIL - This happens after the button clikc event in the contact page
-        function submitForm() {
+        function submitForm(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
